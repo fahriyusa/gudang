@@ -20,22 +20,35 @@
 </nav>
 <!-- end navbar -->
 
+<?php if ($this->session->flashdata('message_login_error')): ?>
+    <div class="invalid-feedback">
+        <?= $this->session->flashdata('message_login_error') ?>
+    </div>
+<?php endif ?>
+<?= $this->session->flashdata('message'); ?>
+
 <!-- login -->
-<div class="card-header text" style="width: 30rem;">
+<div class="card-header">
     <div class="card-body position-absolute top-50 start-50 translate-middle">
         <div class="card text-center">
             <div class="card-header">
-                <img src="./assets/img/user.png" class="rounded mx-auto d-block" alt="user.png">
+                <img src="./assets/img/user.png" class="rounded mx-auto d-block" alt="user">
             </div>
             <div class="card-body">
-                <form target="">
+                <form method="post" class="needs-validation" action="<?= base_url('Login/login'); ?>" novalidate>
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" required>
+                        <div class=" invalid-feedback">
+                            Username Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" required>
+                        <div class=" invalid-feedback">
+                            Password Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>

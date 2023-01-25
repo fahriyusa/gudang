@@ -1,6 +1,6 @@
-<nav class="navbar bg-light">
+<nav class="navbar bg-info">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Gudang Abrak Masyarakat</a>
+        <a class="navbar-brand nprinsley-text-glitchan" href="<?= base_url('Home')?>">Gudang Abrak Masyarakat</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -36,10 +36,13 @@
                         <a class="text-decoration-none active" aria-current="page" href="<?= base_url('Informasi')?>">Informasi Gudang</a>
                     </li><br>
                     <li class="nav-item">
-                        <a class="text-decoration-none active" aria-current="page" href="<?= base_url('User')?>">User</a>
+                        <a class="text-decoration-none active" aria-current="page" href="<?= base_url('User')?>">Petugas</a>
                     </li><br>
                     <li class="nav-item">
                         <a class="text-danger nav-link" aria-current="page" href="<?= base_url('Login/logout')?>">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-danger nav-link" aria-current="page" href="<?= base_url('Lol')?>">lol</a>
                     </li>
                 </ul>
             </div>
